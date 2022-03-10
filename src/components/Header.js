@@ -1,7 +1,8 @@
 import React from "react";
 import Search from "./Search";
+import NewItemForm from "./NewItemForm";
 
-function Header() {
+const Header = ({ setSearch, addListing }) => {
   return (
     <header>
       <h1>
@@ -10,9 +11,10 @@ function Header() {
         </span>
         gregslist
       </h1>
-      <Search />
+      <Search setSearch={setSearch} />
+      <NewItemForm addListing={addListing} />
     </header>
   );
-}
+};
 
 export default Header;
